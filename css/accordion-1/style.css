@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: #1c1c1c;
+  color: #fff;
+}
+section.accordion1{
+.title {
+  font-size: 3rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.accordion {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+details {
+  border-bottom: 2px solid #fff;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  &.open .accordion-body {
+  max-height: 300px;
+  animation: accordionIn 0.8s ease-in-out;
+  }
+  &.open svg {
+  transform: rotate(180deg);
+}
+  &.closing .answer {
+  animation: accordionOut 1s ease-in-out;
+}
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h3 {
+  font-size: 1.5em;
+}
+}
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+svg {
+  transition: transform 0.5s ease-in;
+}
+}
+@keyframes accordionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes accordionOut {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+
+
+
+
+
+
+
